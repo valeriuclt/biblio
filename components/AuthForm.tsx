@@ -32,10 +32,6 @@ const AuthForm = <T extends FieldValues>({
   
   const router = useRouter()
 
-  // const form: UseFormReturn <T> = useForm( props: {
-  //   resolver: zodResolver(schema),
-  //   defaultValues: defaultValues as DefaultValues<T>,
-  // });
   const form: UseFormReturn<T> = useForm({
     resolver: zodResolver(schema),
     defaultValues: defaultValues as DefaultValues<T>,

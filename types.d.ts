@@ -1,23 +1,23 @@
 interface Book {
-    // id: string;
+    id: string; 
     title: string;
     author: string;
     genre: string;
     rating: number;
-    // totalCopies: number;
-    total_copies: number;
-    // availableCopies: number;
-    available_copies: number;
+    totalCopies: number;
+    // total_copies: number;
+    availableCopies: number;
+    // available_copies: number;
     description: string;
     // coverColor: string;
-    color: string;
-    cover: string;
-    coverImage: string;
-    // videoUrl: string;
-    video: string;
+    coverColor: string;
+    // cover: string;
+    coverUrl: string;
+    videoUrl: string;
+    // video: string;
     summary: string;
     isLoanedBook?:boolean;
-    // createdAt: Date | null;
+    createdAt: Date | null;
   }
   
   interface AuthCredentials {
