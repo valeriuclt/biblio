@@ -57,6 +57,7 @@ const Sidebar = ({ session }: { session: Session }) => {
             );
           })}
         </div>
+        
       </div>
 
       <div className="user">

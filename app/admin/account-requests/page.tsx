@@ -1,6 +1,6 @@
-const page  = () => {
+const page = () => {
   return (
-    <div>cerere pe cont </div>
+    <div>page</div>
   )
 }
-export default page 
+export default page

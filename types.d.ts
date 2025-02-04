@@ -4,21 +4,49 @@ interface Book {
     author: string;
     genre: string;
     rating: number;
-    totalCopies: number;
-    // total_copies: number;
-    availableCopies: number;
-    // available_copies: number;
-    description: string;
-    // coverColor: string;
-    coverColor: string;
-    // cover: string;
+    totalCopies: number; 
+    availableCopies: number; 
+    description: string; 
+    coverColor: string; 
     coverUrl: string;
-    videoUrl: string;
-    // video: string;
+    videoUrl: string; 
     summary: string;
     isLoanedBook?:boolean;
     createdAt: Date | null;
   }
+  
+interface BookB {
+    id: string; 
+    userId: string;
+    bookId: string;
+    borrowDate: Date | null;
+    dueDate: Date | null;
+    returnDate: Date | null;
+    status: string;
+    createdAt: Date | null;
+  }
+  
+// interface Book {
+//     id: string; 
+//     title: string;
+//     author: string;
+//     genre: string;
+//     rating: number;
+//     totalCopies: number;
+//     // total_copies: number;
+//     availableCopies: number;
+//     // available_copies: number;
+//     description: string;
+//     // coverColor: string;
+//     coverColor: string;
+//     // cover: string;
+//     coverUrl: string;
+//     videoUrl: string;
+//     // video: string;
+//     summary: string;
+//     isLoanedBook?:boolean;
+//     createdAt: Date | null;
+//   }
   
   interface AuthCredentials {
     fullName: string;

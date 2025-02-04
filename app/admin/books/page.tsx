@@ -1,6 +1,13 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import BooksTable from "@/components/TableBook"
+import { db } from "@/database/drizzle";
+import { books } from "@/database/schema";
+import { desc } from "drizzle-orm";
+
+
+const carte = await db.select().from(books).orderBy(desc(books.createdAt));
 
 const Page = () => {
   return (
@@ -15,7 +22,8 @@ const Page = () => {
       </div>
 
       <div className="mt-7 w-full overflow-hidden">
-        <p>Table</p>
+   
+      <BooksTable books={carte} />;
       </div>
     </section>
   );

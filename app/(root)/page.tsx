@@ -24,14 +24,11 @@ import { desc } from "drizzle-orm";
 // console.log(JSON.stringify(result));
 return(
   <>
-   {/* <BookOverview {...sampleBooks[0] } />  */}
+   
    <BookOverview {...latestBooks[0] } userId={session?.user?.id as string} /> 
-   <BookList 
-   title="Latest Books"
-   books={latestBooks.slice(1)} 
-   containerClassName="mt-28"
-   />
-   <h1>aici</h1>
+   <BookList  title="Latest Books" books={latestBooks.slice(1)}  containerClassName="mt-28" />
+   
+   {/* <BookOverview {...sampleBooks[0] } />  */}
    </>
   )
 }
