@@ -5,11 +5,12 @@ import BooksTable from "@/components/TableBook"
 import { db } from "@/database/drizzle";
 import { books } from "@/database/schema";
 import { desc } from "drizzle-orm";
+ 
 
+const Page = async() => {
 
-const carte = await db.select().from(books).orderBy(desc(books.createdAt));
-
-const Page = () => {
+  const carte = await db.select().from(books).orderBy(desc(books.createdAt));
+  
   return (
     <section className="w-full rounded-2xl bg-white p-7">
       <div className="flex flex-wrap items-center justify-between gap-2">

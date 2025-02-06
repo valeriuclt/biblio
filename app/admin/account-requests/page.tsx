@@ -1,6 +1,10 @@
+import Ovrview from "@/components/admin/ovrview"
+
 const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <Ovrview />
+    </div>
   )
 }
 export default page

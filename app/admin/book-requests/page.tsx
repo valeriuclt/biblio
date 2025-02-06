@@ -20,8 +20,7 @@ const page = async () => {
     ...item.book,
     borrowCount: Number(item.borrowCount),
   })) as (Book & { borrowCount: number })[];
-
-  console.log("imprumutate", booksWithBorrowCount);
+ 
 
   return (
     <section className="p-6">
@@ -54,9 +53,10 @@ const page = async () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> 
 
       <BookList title="Most Borrowed Books" books={booksWithBorrowCount} />
+
     </section>
   );
 };

@@ -4,7 +4,7 @@
 
 @layer components {
     .admin-container {
-        @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-light-300 p-5 xs:p-10;
+        @apply flex w-[calc(100%-264px)] flex-1 flex-col bg-light-400 p-5 xs:p-10;
     }
 
     .back-btn {
@@ -201,4 +201,5 @@
     .user-card .email {
         @apply text-light-500 text-sm line-clamp-1 break-words w-full;
     }
+   
 }

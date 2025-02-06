@@ -9,9 +9,9 @@ import { headers } from "next/headers";
 import ratelimit from "@/lib/ratelimit";
 import { redirect } from "next/navigation";
 import { workflowClient } from "@/lib/workflow";
-import config from "@/lib/config";
+import config from "@/lib/config"; 
 
-export const signInWithCredentials = async (
+export  const signInWithCredentials = async (
   params: Pick<AuthCredentials, "email" | "password">,
 ) => {
   const { email, password } = params;
@@ -84,3 +84,9 @@ export const signUp = async (params: AuthCredentials) => {
     return { success: false, error: "Signup error" };
   }
 };
+
+
+export async function handleSignOut() {
+  // Redirectăm către ruta de signout a NextAuth
+  redirect('/api/auth/signout');
+}

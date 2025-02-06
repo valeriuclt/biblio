@@ -1,12 +1,15 @@
-import Quiz from "@/components/quiz";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+
+import { Avatar, AvatarFallback } from "@/components/ui/avatar"; 
 import { db } from "@/database/drizzle";
 import { borrowRecords, users } from "@/database/schema";
 import { getInitials } from "@/lib/utils";
 import { count, eq, desc } from "drizzle-orm";
  
 const page = async () => {
+
+  // const stats = await getOverviewStats();
+  // console.log(stats)
+
   const borrowB = await db
     .select({
       id: users.id,
@@ -38,7 +41,8 @@ const page = async () => {
   }));
 
   return (
-    <div className="p-6 bg-gray-50">
+    <>  
+    <div className="p-4">
       <h1 className="text-3xl font-bold mb-8 text-gray-800">
         Utilizatorii bibliotecii
       </h1>
@@ -47,7 +51,7 @@ const page = async () => {
         {userBorrow.map((util) => (
           <div
             key={util.id}
-            className="w-[320px] p-6 bg-white shadow-lg rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-100"
+            className="w-[320px] p-4 pb-1 bg-white shadow-lg rounded-xl hover:shadow-xl transition-all duration-300 border border-gray-200"
           >
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
@@ -87,19 +91,23 @@ const page = async () => {
                 </span>
               </div>
 
-              {/* <div className="flex justify-end space-x-2">
+              <div className="flex justify-end space-x-2 mt-2 pt-2 border-t border-gray-100">
               <button className="px-3 py-1 text-sm text-blue-600 hover:text-blue-700 font-medium">
                 Vezi detalii
               </button>
               <button className="px-3 py-1 text-sm text-gray-500 hover:text-gray-600 font-medium">
                 Istoric
               </button>
-            </div> */}
             </div>
-          </div>
+            </div>
+           
+      {/* ... celelalte carduri folosind stats */}
+    </div>
         ))}
       </div>
+       
     </div>
+    </>
   );
 };
 
