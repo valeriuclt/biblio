@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-// import { signOut } from "@/auth";
+import { signOut } from "@/auth";
 import { Button } from "@/components/ui/button";
 import { useSession } from "next-auth/react";
 import { handleSignOut } from "@/lib/actions/auth";
@@ -11,6 +11,7 @@ import { getInitials } from "@/lib/utils";
 
 const Header = () => {
   const { data: session } = useSession();
+  console.log('header',session?.user)
   return (
     //     <header className="my-10 flex justify-between gap-5">
     //        <Link href="/">
@@ -93,7 +94,7 @@ const Header = () => {
               href="/admin"
               className="rounded-md bg-secondary px-4 py-2 text-sm font-medium transition-colors hover:bg-secondary/80"
             >
-              Admin Panel
+              Admin 
             </Link>
           )}
           <nav>
@@ -101,7 +102,7 @@ const Header = () => {
               <li>
                 <Button
                   onClick={() => handleSignOut()}
-                  // variant="ghost"
+                  variant="ghost"
                   className="text-sm font-medium"
                 >
                   Logout
