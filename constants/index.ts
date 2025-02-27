@@ -36,8 +36,8 @@ export const navigationLinks = [
     },
     {
       img: "/icons/admin/user.svg",
-      route: "/admin/account-requests",
-      text: "Account Requests",
+      route: "/admin/borrows",
+      text: "Book Management",
     },
   ];
   

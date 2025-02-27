@@ -65,11 +65,33 @@ interface BookB {
     coverColor: string;
     description: string;
     totalCopies: number;
-    videoUrl: string;
+    videoUrl?: string;
     summary: string;
   }
   
   interface BorrowBookParams {
     bookId: string;
     userId: string;
+  }
+
+  interface Imprumut{
+    id: string;
+    status: "BORROWED" | "RETURNED";
+    borrowDate: Date;
+    dueDate: string;  // Note: Date type
+    returnDate: string | null;
+    book: {
+      id: string;
+      title: string;
+      author: string;
+      genre: string;
+      rating: number;
+      coverUrl: string;
+      coverColor: string;
+    };
+    user: {
+      id: string;
+      fullName: string;
+      email: string;
+    }
   }

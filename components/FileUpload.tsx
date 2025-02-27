@@ -185,14 +185,7 @@ const FileUpload = (
         ) : null
         )} 
 
-        {file && (
-          <IKImage 
-          alt={file.filePath}
-          path={file.filePath}
-          width={500}
-          height={300}
-          />
-        )}
+      
     </ImageKitProvider>
   );
 };

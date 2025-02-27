@@ -18,10 +18,11 @@ const Sidebar = ({ session }: { session: Session }) => {
         <div className="logo">
      
           <Image
-            src="/icons/admin/logo.svg"
+            src="/icons/logo.png"
             alt="logo"
             height={37}
             width={37}
+            // object-fit: contain
             />
           <h1>BookWise</h1>
         </div>

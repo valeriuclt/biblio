@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         "ibm-plex-sans": ["IBM Plex Sans", "sans-serif"],
         "bebas-neue": ["var(--bebas-neue)"],
+        "secondary":["var(--font-caveat)"], 
       },
       colors: {
         background: "hsl(var(--background))",

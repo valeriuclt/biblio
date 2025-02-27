@@ -1,11 +1,11 @@
 "use client";
-
-import Image from "next/image";
+ 
 import React from "react";
-import { cn } from "@/lib/utils";
-import BookCoverSvg from "@/components/BookCoverSvg";
 import { IKImage } from "imagekitio-next";
+// import IKImage from 'imagekitio-next';
+import BookCoverSvg from "@/components/BookCoverSvg";
 import config from "@/lib/config";
+import { cn } from "@/lib/utils";
 
 type BookCoverVariant = "extraSmall" | "small" | "medium" | "regular" | "wide";
 
@@ -29,6 +29,7 @@ const BookCover = ({
   variant = "regular",
   coverColor = "#012B48",
   coverImage = "https://placehold.co/400x600.png",
+  
 }: Props) => {
   return (
     <div
@@ -51,7 +52,7 @@ const BookCover = ({
           fill
           className="rounded-sm object-fill"
           loading="lazy"
-          lqip={{ active: true }}
+          // lqip={{ active: true }}
         />
         {/* <Image src={coverImage} alt='coperta' fill className='rounded-sm object-fill' /> */}
       </div>

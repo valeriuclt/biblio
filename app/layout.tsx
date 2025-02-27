@@ -1,12 +1,14 @@
-import type { Metadata } from "next"; 
+import type { Metadata } from "next";
 import "./globals.css";
+import {  Caveat } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
+
 
 import localFont from "next/font/local";
 import { ReactNode } from "react";
-import { Toaster } from "@/components/ui/toaster"
+import { Toaster } from "@/components/ui/toaster";
 import { auth } from "@/auth";
-import {SessionProvider} from"next-auth/react"
- 
+
 const ibmPlexSans = localFont({
   src: [
     { path: "/fonts/IBMPlexSans-Regular.ttf", weight: "400", style: "normal" },
@@ -22,6 +24,12 @@ const bebasNeue = localFont({
   ],
   variable: "--bebas-neue",
 });
+const caveat = Caveat({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-caveat",
+}); 
+ 
 
 export const metadata: Metadata = {
   title: "bilblioteq",
@@ -32,17 +40,19 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
   const session = await auth();
 
   return (
-    <html lang="en">
-      <SessionProvider session={session}>
-        <body
-          className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
-        >
-          {children}
+    
+      <html lang="en">
+        <SessionProvider session={session}>
+          <body
+            className={`${ibmPlexSans.className} ${bebasNeue.variable} ${caveat.variable}  antialiased`}
+          >
+            {children}
 
-          <Toaster />
-        </body>
-      </SessionProvider>
-    </html>
+            <Toaster />
+          </body>
+        </SessionProvider>
+      </html>
+   
   );
 };
 

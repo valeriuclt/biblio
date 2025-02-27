@@ -2,51 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --radius: 0.5rem;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
-    border-radius: 0px;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb {
-    background: transparent;
-    border-radius: 0px;
-  }
-
-  .hide-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: transparent;
-  }
-}
 
 @layer components {
-  /* .aa{
-    apply d
-    
-    
-    display: flex; width: 100%;
-    flex-direction: row;
-    gap: .5rem;
-    border-radius: 9999px;
-    border-width: 1px;
-    --tw-border-opacity: 1;
-    border-color: rgb(237 241 241 / var(--tw-border-opacity, 1));
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
-    --tw-shadow: 0 1px 2px 0 #0000000d;
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000)," 
-  } */
+  
+  .pretitle{@apply font-secondary text-4xl xl:text-[46px] leading-[110%] text-accent ;}
+
   .form-btn {
     @apply bg-primary text-dark-100 hover:bg-primary inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
   }
@@ -57,11 +17,12 @@
 
   /* Book Card */
   .book-title {
-    @apply mt-2 line-clamp-1 text-base font-semibold text-light-200 xs:text-xl;
+    /* @apply mt-2 line-clamp-1 text-base font-semibold text-light-200 xs:text-xl drop-shadow-lg; */
+    @apply mt-2 line-clamp-1 text-base font-semibold text-primary xs:text-xl drop-shadow-sm;
   }
 
   .book-genre {
-    @apply mt-1 line-clamp-1 text-sm italic text-light-200 xs:text-base;
+    @apply mt-1 line-clamp-1 text-sm italic text-light-200 xs:text-base drop-shadow-md;
   }
 
   .book-loaned {
@@ -104,7 +65,7 @@
 
   /* Book List */
   .book-list {
-    @apply mt-10 flex flex-wrap gap-5 max-xs:justify-between xs:gap-10;
+    @apply mt-8 flex flex-wrap gap-4 max-xs:justify-between xs:gap-10;
   }
 
   /* Book Overview */
@@ -133,7 +94,7 @@
   }
 
   .book-description {
-    @apply mt-2 text-justify text-xl text-light-100;
+    @apply mt-2 sm:mt-0 text-justify text-xl sm:text-lg xs:text-sm text-light-100;
   }
 
   .book-overview_btn {
@@ -279,6 +240,12 @@
     @apply flex min-h-screen flex-1 flex-col bg-pattern bg-cover bg-top bg-dark-100 px-5 xs:px-10 md:px-16;
   }
 
+  .bg-footer{
+    background-image: url('/pattern_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   /* Book Details */
   .book-details {
     @apply lg:mt-36 mt-16 mb-20 flex flex-col gap-16 lg:flex-row;
@@ -286,6 +253,17 @@
 
   .book-details h3 {
     @apply text-xl font-semibold text-primary;
+  }
+  .book-swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   /* Library */
@@ -355,5 +333,5 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-  }
+  } 
 }
