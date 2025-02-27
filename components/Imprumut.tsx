@@ -213,7 +213,7 @@ const Imprumutat = ({ borrow }: { borrow: Imprumut[] }) => {
                   key={borrow.id}
                   className="bg-white p-4 rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div className="flex flex-col sm:flex-row  justify-between items-center">
+                  <div className="flex flex-col sm:flex-row xs:text-xs justify-between items-center">
                     <div>
                       <h3 className="font-semibold text-xl text-gray-900">
                         {borrow.book.title}
@@ -253,11 +253,11 @@ const Imprumutat = ({ borrow }: { borrow: Imprumut[] }) => {
                         )}
                       </div>
                     </div>
-                    <div className="flex flex-row sm:flex-col items-center sm:items-start gap-4">
+                    <div className="flex flex-col xs:flex-row  items-center sm:items-start gap-4">
                       <span
                         className={`px-4 py-2 rounded-full text-sm font-medium shadow-sm transition-all duration-200 ${
                           borrow.status === "BORROWED"
-                            ? "italic text-blue-800 border border-blue-300"
+                            ? "italic text-blue-800 border border-blue-300  "
                             : "bg-green-100 text-green-800 border border-green-300"
                         }`}
                       >

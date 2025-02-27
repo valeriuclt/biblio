@@ -68,7 +68,7 @@ const Hero = ({ books }: Props) => {
           </p>
         </div>
         <form onSubmit={handleSubmit} className="">
-          <div className="bg-white/40 w-[98vw] sm:max-w-[600px] md:max-w-[700px] lg:max-w-[800px] xl:max-w-[900px] p-8 xl:pl-8 xl:pr-2 h-auto xl:h-[70px] rounded-3xl xl:rounded-full backdrop-blur-[20px] flex flex-col md:flex-row items-center gap-6 mx-auto text-sm text-white z-50">
+          <div className="bg-white/40 w-[88vw] xs:max-[300px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[900px] p-8 xl:pl-8 xl:pr-2 h-auto xl:h-[70px] rounded-3xl xl:rounded-full backdrop-blur-[20px] flex flex-col md:flex-row items-center gap-6 mx-auto text-sm text-white z-50">
             <div className="flex flex-grow items-center gap-[10px] w-full xl:w-[190px] ">
               <div className="text-lg">
                 <BiSearch />
